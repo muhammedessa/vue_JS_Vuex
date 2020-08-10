@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Muhammed Essa</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style>
+.blue{
+   color:blue;
+}
+ .underline{
+     text-decoration: underline;
+ }
+</style>
+</head>
+<body>
+
+<div id='app'>
+<h1> {{  firstname }}  {{  lastname }}  </h1>
+<h1>   {{  name }}  </h1>
+<h1  :class="classes"> Hello</h1>
+
+<a  :href="googlewebsite"> click</a><br>
+
+<input type="text"  v-model="name"  >
+
+<button   v-on:click="salary++">  Click me  </button>
+<button   v-on:click="salary--">  Click me  </button>
+
+<button   v-on:click="changeSalary(20)">  Change me  </button>
+<br>
+<br><br><br>
+
+
+<div v-for="(item, index) in items">
+  {{ index  }} {{ item  }}
+</div>
+<br><br><br>
+
+
+<div v-for="(s, index) in students">
+  {{ index }}  {{ s.name }}  {{ s.age }}  {{ s.department }}
+</div>
+
+
+
+<br><br><br>
+<div v-if="type1 === 'A'">
+  A
+</div>
+<div v-else-if="type1 === 'B'">
+  B
+</div>
+<div v-else-if="type1 === 'C'">
+  C
+</div>
+<div v-else>
+  Not A/B/C
+</div>
+
+
+
+
+
+<br><br><br>
+<h1 v-if="type"> Muhammed True</h1>
+ <button v-on:click="changeType">Show or Hide</button>
+
+
+
+<br><br><br>
+<button  @click.shift="messageClick" >  Shift key  </button> 
+<button  @click.alt="messageClick" >  alt key  </button> 
+<br><br><br>
+<select v-model="selected">
+  <option disabled value="">Please select one</option>
+  <option>A</option>
+  <option>B</option>
+  <option>C</option>
+</select>
+
+<span>Selected: {{ selected }}</span>
+
+<br><br><br>
+
+
+ <button v-on:click="say('Muhammed')">Say hi</button>
+  <button v-on:click="say('Essa')">Say what</button>
+
+
+
+ <h2>  {{age}}    </h2>
+
+  <h2>  {{myName()}}    </h2>
+
+  <h2>  {{myNextName()}}    </h2>
+ 
+   <h2>  {{putYourName('Hassan Ahmed')}}    </h2>
+
+<p>fdjsdhjfhsjkdfhjshjdkf.</p>
+</div>
+
+ 
+
+<script src='app.js'></script>
+</body>
+</html>
